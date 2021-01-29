@@ -1,13 +1,6 @@
 const assert = require("assert");
+const { capitalizeFirstLetters } = require("./capitalizeFirstLetters") ;
 
-const capitalizeFirstLetters = (input) =>
-  input.length > 0
-    ? input
-        .split(" ")
-        .map((e) => e[0].toUpperCase() + e.slice(1))
-        .join(" ")
-    : "";
-    
 assert.strictEqual(typeof capitalizeFirstLetters, "function");
 assert.strictEqual(capitalizeFirstLetters("javaScript"), "JavaScript");
 assert.strictEqual(capitalizeFirstLetters("j"), "J");
